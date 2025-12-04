@@ -117,7 +117,7 @@ python3 -m http.server 8000
 4. Branch: `main` / `root`
 5. Save
 
-Le site sera accessible à : `https://cchopin.github.io/portfolio/`
+Le site sera accessible à : `https://tely.info`
 
 ### Déploiement Netlify
 
