@@ -1,5 +1,7 @@
 // Matrix Rain Effect
+document.addEventListener('DOMContentLoaded', function() {
 const canvas = document.getElementById('matrix-canvas');
+if (!canvas) return;
 const ctx = canvas.getContext('2d');
 
 // Set canvas size
@@ -62,3 +64,5 @@ window.addEventListener('resize', () => {
         drops[i] = Math.floor(Math.random() * -100);
     }
 });
+
+}); // End DOMContentLoaded
