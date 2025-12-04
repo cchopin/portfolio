@@ -2,7 +2,7 @@
 
 Portfolio professionnel présentant mes compétences et projets en cybersécurité offensive et défensive, Database Administration et développement Nim.
 
-## 🎨 Design
+## Design
 
 - Design moderne et cyberpunk avec effet Matrix
 - Thème sombre optimisé pour les yeux
@@ -10,7 +10,7 @@ Portfolio professionnel présentant mes compétences et projets en cybersécurit
 - Entièrement responsive (desktop, tablet, mobile)
 - Animations fluides et interactives
 
-## 📁 Structure du Projet
+## Structure du projet
 
 ```
 portfolio/
@@ -26,7 +26,7 @@ portfolio/
 └── README.md             # Ce fichier
 ```
 
-## ✨ Personnalisation
+## Personnalisation
 
 - **Nom** : Clémence Chopin
 - **Titre** : Database Administrator & Cybersecurity Enthusiast
@@ -42,9 +42,9 @@ portfolio/
   - CATT: Télépilote de Drone (DGAC) - Août 2022
   - CCAD: Certificat de Capacité Animaux (DRAAF) - Janvier 2017
 
-## 🚀 Fonctionnalités
+## Fonctionnalités
 
-### Page d'Accueil
+### Page d'accueil
 - Présentation professionnelle avec avatar
 - Badges de compétences clés (Database Admin, Nim Lover, Red Team, Blue Team)
 - Statistiques visuelles (projets, modules, langages)
@@ -53,7 +53,7 @@ portfolio/
 - Section certifications (7 certifications dont M2I, TryHackMe, CATT, CCAD)
 - Liens sociaux et contact
 
-### Page Projets
+### Page projets
 - Filtres interactifs par catégorie
   - Tous
   - Offensive Security
@@ -65,7 +65,7 @@ portfolio/
 - Liens GitHub
 - Descriptions et listes de fonctionnalités
 
-### Page Compétences
+### Page compétences
 - Organisation par domaines
   - Offensive Security (Pentest, Web Security, Malware Dev, Hardware Hacking)
   - Defensive Security (SIEM, Threat Intelligence, Email Security, Incident Response)
@@ -82,10 +82,10 @@ portfolio/
 - Animations fade-in au scroll
 - Barres de progression animées
 - Compteurs animés pour les stats
-- Easter egg (Konami Code 🎮)
+- Easter egg (Konami Code)
 - Effet Matrix en background
 
-## 🛠️ Technologies Utilisées
+## Technologies utilisées
 
 - **HTML5** - Structure sémantique
 - **CSS3** - Variables CSS, Grid, Flexbox, Animations
@@ -93,7 +93,7 @@ portfolio/
 - **Font Awesome 6.4** - Icônes
 - **Google Fonts (Inter)** - Typographie moderne
 
-## 📦 Installation et Déploiement
+## Installation et déploiement
 
 ### Local
 
@@ -133,7 +133,7 @@ Ou via l'interface Netlify :
 3. Publish directory : `/`
 4. Deploy
 
-## 🎨 Personnalisation
+## Personnalisation du design
 
 ### Couleurs
 
@@ -163,7 +163,7 @@ const chars = '01'.split('');  // Caractères affichés
 const fontSize = 14;           // Taille de la police
 ```
 
-## 📊 Projets Présentés
+## Projets présentés
 
 1. **Nginx Attack Parser** - Analyseur de logs avec AbuseIPDB
 2. **NimRAT Educational** - Framework éducatif de malware en Nim
@@ -175,18 +175,18 @@ const fontSize = 14;           // Taille de la police
 8. **Port Scanner Bash** - Scanner de ports natif
 9. **CVE Arsenal Lab** - Laboratoire d'exploitation CVEs
 
-## 🔒 Sécurité
+## Sécurité
 
 - Aucune donnée sensible dans le code
 - Pas de tracking ou analytics par défaut
 - Liens externes s'ouvrent dans un nouvel onglet
 - Code minimaliste et auditable
 
-## 📝 License
+## License
 
 Ce portfolio est un projet personnel. Le code peut être utilisé comme template avec attribution.
 
-## 📧 Contact
+## Contact
 
 - **GitHub**: [github.com/cchopin](https://github.com/cchopin)
 - **LinkedIn**: [linkedin.com/in/clemence-chopin](https://www.linkedin.com/in/clemence-chopin/)
@@ -196,7 +196,7 @@ Ce portfolio est un projet personnel. Le code peut être utilisé comme template
 
 **Note**: Ce portfolio est en constante évolution. Les projets et compétences sont régulièrement mis à jour au fil de ma progression dans la formation Jedha et mes projets personnels.
 
-## 🎯 TODO
+## TODO
 
 - [ ] Ajouter section blog/articles techniques
 - [ ] Ajouter mode clair/sombre toggle
