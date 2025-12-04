@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - Clémence Chopin</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Style spécifique pour la page articles */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .article-card {
+            background: linear-gradient(135deg, rgba(26, 26, 31, 0.8) 0%, rgba(42, 42, 53, 0.6) 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--success));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 240, 255, 0.3);
+        }
+
+        .article-card:hover::before {
+            opacity: 1;
+        }
+
+        .article-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--accent), var(--success));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--background);
+            margin-bottom: 0.5rem;
+        }
+
+        .article-card h3 {
+            color: var(--text);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .article-description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .article-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .article-tag {
+            background: rgba(0, 240, 255, 0.1);
+            color: var(--accent);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .article-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, var(--accent), var(--success));
+            color: var(--background);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            align-self: flex-start;
+        }
+
+        .article-link:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(0, 240, 255, 0.4);
+        }
+
+        .page-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .page-intro h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--accent), var(--success));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-intro p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .articles-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .article-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="matrix-canvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-terminal"></i>
+                <span>CC</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="projets.html" class="nav-link">Projets</a></li>
+                <li><a href="competences.html" class="nav-link">Compétences</a></li>
+                <li><a href="articles.html" class="nav-link active">Articles</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section" style="padding-top: 8rem;">
+        <div class="container">
+            <div class="page-intro">
+                <h1>
+                    <i class="fas fa-newspaper"></i>
+                    Mes articles de cybersécurité
+                </h1>
+                <p>
+                    Découvrez mes articles techniques sur la cybersécurité, la sécurité des bases de données, et mes aventures avec les chèvres.
+                </p>
+            </div>
+
+            <div class="articles-grid">
+                <!-- Article 1: Deserialization -->
+                <div class="article-card">
+                    <div class="article-icon">
+                        <i class="fas fa-bomb"></i>
+                    </div>
+                    <h3>Deserialization Attacks</h3>
+                    <p class="article-description">
+                        Quand vos données deviennent du code exécutable. Une plongée dans les attaques par désérialisation avec Python, Java, PHP et .NET.
+                    </p>
+                    <div class="article-tags">
+                        <span class="article-tag">Python</span>
+                        <span class="article-tag">Java</span>
+                        <span class="article-tag">Security</span>
+                    </div>
+                    <a href="article.html?file=deserialization" class="article-link">
+                        Lire l'article <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Article 2: OpenCTI -->
+                <div class="article-card">
+                    <div class="article-icon">
+                            <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>OpenCTI : Threat Intelligence Platform</h3>
+                    <p class="article-description">
+                        Comment j'ai arrêté de googler "latest APT campaigns" à 2h du matin. Guide complet d'installation et configuration d'OpenCTI.
+                    </p>
+                    <div class="article-tags">
+                        <span class="article-tag">Threat Intel</span>
+                        <span class="article-tag">Docker</span>
+                        <span class="article-tag">MITRE</span>
+                    </div>
+                    <a href="article.html?file=openCTI" class="article-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Article 3: OpenCTI DragonForce Investigation -->
+                <div class="article-card">
+                    <div class="article-icon">
+                            <i class="fas fa-dragon"></i>
+                    </div>
+                    <h3>Investigation DragonForce avec OpenCTI</h3>
+                    <p class="article-description">
+                        Analyse d'une campagne ransomware du groupe DragonForce avec OpenCTI. Cartographie des IoCs, tactiques et infrastructure.
+                    </p>
+                    <div class="article-tags">
+                        <span class="article-tag">Ransomware</span>
+                        <span class="article-tag">Investigation</span>
+                        <span class="article-tag">OpenCTI</span>
+                    </div>
+                    <a href="article.html?file=opencti-dragonforce-investigation" class="article-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Article 4: Deadlocks -->
+                <div class="article-card">
+                    <div class="article-icon">
+                            <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Deadlocks en SQL Server</h3>
+                    <p class="article-description">
+                        Quand deux transactions se regardent en chien de faïence. Comprendre, détecter et résoudre les deadlocks dans SQL Server.
+                    </p>
+                    <div class="article-tags">
+                        <span class="article-tag">SQL Server</span>
+                        <span class="article-tag">Database</span>
+                        <span class="article-tag">Performance</span>
+                    </div>
+                    <a href="article.html?file=deadlocks" class="article-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Article 5: HTTPS & TLS -->
+                <div class="article-card">
+                    <div class="article-icon">
+                            <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>HTTPS & TLS : Cryptographie Web</h3>
+                    <p class="article-description">
+                        Comment fonctionne le chiffrement HTTPS et TLS ? Plongée technique dans les certificats, handshakes et cipher suites.
+                    </p>
+                    <div class="article-tags">
+                        <span class="article-tag">Cryptography</span>
+                        <span class="article-tag">TLS</span>
+                        <span class="article-tag">Web Security</span>
+                    </div>
+                    <a href="article.html?file=https-tls" class="article-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Article 6: DNS Spoofing -->
+                <div class="article-card">
+                    <div class="article-icon">
+                            <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>DNS Spoofing & Cache Poisoning</h3>
+                    <p class="article-description">
+                        Comment rediriger google.com vers l'enclos de mes chèvres. DNS spoofing, cache poisoning et attaques réseau.
+                    </p>
+                    <div class="article-tags">
+                        <span class="article-tag">Network</span>
+                        <span class="article-tag">DNS</span>
+                        <span class="article-tag">Attack</span>
+                    </div>
+                    <a href="article.html?file=dns-spoofing" class="article-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Article 7: BGP Hijacking -->
+                <div class="article-card">
+                    <div class="article-icon">
+                            <i class="fas fa-route"></i>
+                    </div>
+                    <h3>BGP Hijacking : Détourner Internet</h3>
+                    <p class="article-description">
+                        Comment un faux tweet peut rediriger tout le trafic YouTube. Introduction au BGP hijacking et sécurité des routes Internet.
+                    </p>
+                    <div class="article-tags">
+                        <span class="article-tag">BGP</span>
+                        <span class="article-tag">Routing</span>
+                        <span class="article-tag">Network Security</span>
+                    </div>
+                    <a href="article.html?file=bgp-hijacking" class="article-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Article 8: ARP Poisoning -->
+                <div class="article-card">
+                    <div class="article-icon">
+                            <i class="fas fa-user-secret"></i>
+                    </div>
+                    <h3>ARP Poisoning : MITM sur LAN</h3>
+                    <p class="article-description">
+                        L'art de se faire passer pour la passerelle réseau. ARP poisoning, man-in-the-middle et interception de trafic local.
+                    </p>
+                    <div class="article-tags">
+                        <span class="article-tag">MITM</span>
+                        <span class="article-tag">ARP</span>
+                        <span class="article-tag">Network</span>
+                    </div>
+                    <a href="article.html?file=arp-poisoning" class="article-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Article 9: SQL Injection -->
+                <div class="article-card">
+                    <div class="article-icon">
+                            <i class="fas fa-syringe"></i>
+                    </div>
+                    <h3>Anatomie d'une Injection SQL</h3>
+                    <p class="article-description">
+                        Du concept à l'exploitation avec du vrai code qui fait peur. SQL injection in-band, blind, et out-of-band expliquées.
+                    </p>
+                    <div class="article-tags">
+                        <span class="article-tag">SQL Injection</span>
+                        <span class="article-tag">Web Security</span>
+                        <span class="article-tag">Database</span>
+                    </div>
+                    <a href="article.html?file=sql-injection" class="article-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Article 10: Session Hijacking -->
+                <div class="article-card">
+                    <div class="article-icon">
+                            <i class="fas fa-user-ninja"></i>
+                    </div>
+                    <h3>Session Hijacking : Voler des Sessions</h3>
+                    <p class="article-description">
+                        Comment voler la session d'un utilisateur et prendre le contrôle de son compte. Cookies, tokens et sécurité des sessions.
+                    </p>
+                    <div class="article-tags">
+                        <span class="article-tag">Sessions</span>
+                        <span class="article-tag">Web Security</span>
+                        <span class="article-tag">Cookies</span>
+                    </div>
+                    <a href="article.html?file=article-session-hijacking" class="article-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Article 11: Password Hashing -->
+                <div class="article-card">
+                    <div class="article-icon">
+                            <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Hachage de Mots de Passe</h3>
+                    <p class="article-description">
+                        MD5, SHA, bcrypt, Argon2 : les algorithmes de hachage de mots de passe expliqués. Quoi utiliser et pourquoi.
+                    </p>
+                    <div class="article-tags">
+                        <span class="article-tag">Cryptography</span>
+                        <span class="article-tag">Passwords</span>
+                        <span class="article-tag">Security</span>
+                    </div>
+                    <a href="article.html?file=alt_hash_password" class="article-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Article 12: Execution Plans -->
+                <div class="article-card">
+                    <div class="article-icon">
+                            <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Plans d'Exécution SQL Server</h3>
+                    <p class="article-description">
+                        Comprendre et optimiser les plans d'exécution dans SQL Server. Index scans, seeks et optimisation de requêtes.
+                    </p>
+                    <div class="article-tags">
+                        <span class="article-tag">SQL Server</span>
+                        <span class="article-tag">Performance</span>
+                        <span class="article-tag">DBA</span>
+                    </div>
+                    <a href="article.html?file=execution-plans" class="article-link">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Clémence Chopin - DBA & Cybersecurity Enthusiast</p>
+            <p class="footer-note">Built with <i class="fas fa-heart"></i> and code</p>
+        </div>
+    </footer>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/matrix.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
