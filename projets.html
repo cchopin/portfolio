@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Clémence Chopin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="matrix-canvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-terminal"></i>
+                <span>CC</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="projets.html" class="nav-link active">Projets</a></li>
+                <li><a href="competences.html" class="nav-link">Compétences</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-folder-open"></i> Mes Projets</h1>
+            <p>Une sélection de mes réalisations en cybersécurité offensive et défensive</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="offensive">Offensive Security</button>
+                <button class="filter-btn" data-filter="defensive">Defensive Security</button>
+                <button class="filter-btn" data-filter="devsecops">DevSecOps</button>
+                <button class="filter-btn" data-filter="education">Éducation</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Nginx Attack Parser -->
+                <div class="project-card" data-category="defensive">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Nginx Attack Parser</h3>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">SIEM</span>
+                            <span class="tag">Threat Detection</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p>
+                            Analyseur de logs Nginx performant pour la détection de menaces de sécurité avec
+                            intégration AbuseIPDB pour l'analyse de réputation d'IP.
+                        </p>
+                        <ul class="project-features">
+                            <li>Détection de SQL Injection, XSS, Path Traversal</li>
+                            <li>Identification de brute-force et bots malveillants</li>
+                            <li>Système de cache IP optimisé (30 jours)</li>
+                            <li>Rapports colorés avec classification de risque</li>
+                        </ul>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/cchopin/nginx-attack-parser" target="_blank" class="btn btn-sm btn-primary">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- NimRAT Educational -->
+                <div class="project-card" data-category="offensive education">
+                    <div class="project-header">
+                        <div class="project-icon danger">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <h3>NimRAT Educational Framework</h3>
+                        <div class="project-tags">
+                            <span class="tag">Nim</span>
+                            <span class="tag">Malware Analysis</span>
+                            <span class="tag">Red Team</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p>
+                            Framework éducatif pour comprendre les techniques de malware et mieux s'en protéger.
+                            Strictement destiné à l'apprentissage et à la recherche en sécurité.
+                        </p>
+                        <ul class="project-features">
+                            <li>Module 1: Reconnaissance système</li>
+                            <li>Module 2: Techniques de persistence (Registre, Hosts)</li>
+                            <li>Module 3: Évasion (Anti-VM, Anti-Debug)</li>
+                            <li>Module 4: Command & Control (C2 Server)</li>
+                            <li>Module 5: DLL & Shellcode Injection</li>
+                        </ul>
+                        <div class="warning-box">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Usage éducatif uniquement - VM isolée requise
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/cchopin/nimrat-educational" target="_blank" class="btn btn-sm btn-primary">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Formation Jedha -->
+                <div class="project-card" data-category="education defensive offensive">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Formation Cybersécurité Jedha</h3>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">OSINT</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p>
+                            Formation intensive en cybersécurité full stack couvrant les aspects offensifs et défensifs.
+                            4/16 modules complétés avec projets pratiques.
+                        </p>
+                        <ul class="project-features">
+                            <li>Threat Intelligence: OpenCTI, MITRE ATT&CK</li>
+                            <li>Web Security: SQL Injection, XSS, CSRF demos</li>
+                            <li>Email Security: SPF/DKIM/DMARC, Gophish</li>
+                            <li>Custom HTTP Server en Python</li>
+                            <li>Analyseur de logs de sécurité web</li>
+                        </ul>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/cchopin/jedha" target="_blank" class="btn btn-sm btn-primary">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Flipper Zero Evil Portal -->
+                <div class="project-card" data-category="offensive education">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <h3>Flipper Zero Evil Portal</h3>
+                        <div class="project-tags">
+                            <span class="tag">ESP32</span>
+                            <span class="tag">WiFi</span>
+                            <span class="tag">Social Engineering</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p>
+                            Point d'accès WiFi captif utilisant Flipper Zero et carte WiFi ESP32 pour
+                            démonstrations de phishing et formation à la sensibilisation.
+                        </p>
+                        <ul class="project-features">
+                            <li>Création de portails captifs personnalisés</li>
+                            <li>Capture de credentials (environnement contrôlé)</li>
+                            <li>Logs stockés sur carte SD Flipper</li>
+                            <li>Multiples templates de portails</li>
+                        </ul>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/cchopin/flipper-zero-evil-portal" target="_blank" class="btn btn-sm btn-primary">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- SQL Engines Management -->
+                <div class="project-card" data-category="devsecops">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Gestion Moteurs SQL avec Ansible</h3>
+                        <div class="project-tags">
+                            <span class="tag">Ansible</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">LDAP</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p>
+                            Automatisation complète de la gestion des utilisateurs, permissions et bases de données
+                            PostgreSQL/MSSQL avec Ansible et intégration LDAP.
+                        </p>
+                        <ul class="project-features">
+                            <li>Hiérarchie de rôles (Reader/Writer/Owner)</li>
+                            <li>Synchronisation LDAP avec ldap2pg</li>
+                            <li>Validation stricte des mots de passe</li>
+                            <li>Scripts d'audit de permissions</li>
+                            <li>Intégration AWX pour orchestration</li>
+                        </ul>
+                    </div>
+                    <div class="project-footer">
+                        <a href="#" class="btn btn-sm btn-secondary">
+                            <i class="fas fa-lock"></i> Privé
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Nim Educational -->
+                <div class="project-card" data-category="education">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>Nim Educational</h3>
+                        <div class="project-tags">
+                            <span class="tag">Nim</span>
+                            <span class="tag">Learning</span>
+                            <span class="tag">Programming</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p>
+                            Parcours d'apprentissage progressif du langage Nim, de la syntaxe de base
+                            aux applications de cybersécurité.
+                        </p>
+                        <ul class="project-features">
+                            <li>9 séries d'exercices progressifs</li>
+                            <li>Bases: Variables, types, structures de contrôle</li>
+                            <li>Avancé: Fichiers, SQLite, arguments CLI</li>
+                            <li>Projets de synthèse pratiques</li>
+                        </ul>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/cchopin/nim-educational" target="_blank" class="btn btn-sm btn-primary">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 100 Red Team Projects -->
+                <div class="project-card" data-category="offensive education">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-list-check"></i>
+                        </div>
+                        <h3>100 Red Team Projects</h3>
+                        <div class="project-tags">
+                            <span class="tag">Red Team</span>
+                            <span class="tag">Pentest</span>
+                            <span class="tag">Collection</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p>
+                            Collection de 100 projets Red Team organisés par difficulté, couvrant le networking,
+                            la cryptographie, le reverse engineering et le post-exploitation.
+                        </p>
+                        <ul class="project-features">
+                            <li>Niveau 1: TCP/UDP servers, Caesar Cipher</li>
+                            <li>Niveau 2: Port scanners, Web brute-forcers</li>
+                            <li>Niveau 3: Payloads, Botnets, Ransomware</li>
+                            <li>Niveau 4: Packet analysis, Firewalls</li>
+                            <li>Niveau 5: Code injection, Cryptography</li>
+                        </ul>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/cchopin/100-redteam-projects" target="_blank" class="btn btn-sm btn-primary">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Port Scanner -->
+                <div class="project-card" data-category="offensive education">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>Port Scanner Bash</h3>
+                        <div class="project-tags">
+                            <span class="tag">Bash</span>
+                            <span class="tag">Network</span>
+                            <span class="tag">Reconnaissance</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p>
+                            Scanner de ports TCP simple mais puissant écrit en Bash natif,
+                            sans dépendances externes.
+                        </p>
+                        <ul class="project-features">
+                            <li>Scan des ports communs (top 10)</li>
+                            <li>Scan de port spécifique</li>
+                            <li>Identification de services</li>
+                            <li>Output coloré pour lisibilité</li>
+                        </ul>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/cchopin/cyberini" target="_blank" class="btn btn-sm btn-primary">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CVE Arsenal Lab -->
+                <div class="project-card" data-category="offensive">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3>CVE Arsenal Lab</h3>
+                        <div class="project-tags">
+                            <span class="tag">CVE</span>
+                            <span class="tag">Exploits</span>
+                            <span class="tag">Research</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p>
+                            Laboratoire de recherche et d'exploitation de CVEs pour l'apprentissage
+                            et le testing de vulnérabilités connues.
+                        </p>
+                        <ul class="project-features">
+                            <li>Collection de CVEs documentées</li>
+                            <li>Environnements de test isolés</li>
+                            <li>Proof of Concepts (PoCs)</li>
+                            <li>Méthodologie d'exploitation</li>
+                        </ul>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/cchopin/CVE-Arsenal-Lab" target="_blank" class="btn btn-sm btn-primary">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Clémence Chopin - DBA & Cybersecurity Enthusiast</p>
+            <p class="footer-note">Built with <i class="fas fa-heart"></i> and code</p>
+        </div>
+    </footer>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/matrix.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
