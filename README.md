@@ -49,7 +49,7 @@ portfolio/
 - Badges de compétences clés (Database Admin, Nim Lover, Red Team, Blue Team)
 - Statistiques visuelles (projets, modules, langages)
 - Grille d'expertise (6 domaines : DBA, Nim, Red Team, Blue Team, Drone, Chèvres)
-- Section formation avec progression Jedha (4/16 modules)
+- Section formation avec progression Jedha (5/16 modules)
 - Section certifications (7 certifications dont M2I, TryHackMe, CATT, CCAD)
 - Liens sociaux et contact
 
@@ -167,7 +167,7 @@ const fontSize = 14;           // Taille de la police
 
 1. **Nginx Attack Parser** - Analyseur de logs avec AbuseIPDB
 2. **NimRAT Educational** - Framework éducatif de malware en Nim
-3. **Formation Jedha** - Cybersécurité Full Stack (4/16 modules)
+3. **Formation Jedha** - Cybersécurité Full Stack (5/16 modules)
 4. **Flipper Zero Evil Portal** - Portail captif WiFi ESP32
 5. **Gestion SQL Ansible** - Automatisation PostgreSQL/MSSQL
 6. **Nim Educational** - Parcours d'apprentissage Nim

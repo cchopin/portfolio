@@ -1,278 +1,324 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clémence Chopin - DBA & Cybersecurity Enthusiast</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <canvas id="matrix-canvas"></canvas>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Clémence Chopin - DBA & Cybersecurity Enthusiast</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <canvas id="matrix-canvas"></canvas>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <i class="fas fa-terminal"></i>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-terminal"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Accueil</a></li>
+                    <li><a href="projets.html" class="nav-link">Projets</a></li>
+                    <li>
+                        <a href="competences.html" class="nav-link"
+                            >Compétences</a
+                        >
+                    </li>
+                    <li>
+                        <a href="articles.html" class="nav-link">Articles</a>
+                    </li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">Accueil</a></li>
-                <li><a href="projets.html" class="nav-link">Projets</a></li>
-                <li><a href="competences.html" class="nav-link">Compétences</a></li>
-                <li><a href="articles.html" class="nav-link">Articles</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+        </nav>
 
-    <section id="home" class="hero-section">
-        <div class="card">
-            <div class="card-header">
-                <div class="glow"></div>
-                <div class="avatar">
-                    <i class="fas fa-shield-alt"></i>
-                </div>
-                <h1 class="title">Clémence Chopin</h1>
-                <div class="subtitle">Database Administrator & Cybersecurity Enthusiast</div>
-                <div class="badge-container">
-                    <div class="badge">Database Admin</div>
-                    <div class="badge">Nim Lover</div>
-                    <div class="badge">Red Team</div>
-                    <div class="badge">Blue Team</div>
-                </div>
-            </div>
-
-            <div class="card-body">
-                <p class="bio">
-                    Database Administrator passionnée par la cybersécurité et le langage Nim. Actuellement en formation
-                    Cybersécurité Full Stack chez Jedha, je développe mes compétences en sécurité offensive et défensive
-                    tout en créant des outils innovants. Mon expertise en bases de données combinée à ma passion pour la
-                    cybersécurité me permet d'aborder la sécurité des systèmes avec une perspective unique.
-                </p>
-
-                <div class="stats">
-                    <div class="stat-card">
-                        <div class="stat-number">15+</div>
-                        <div class="stat-label">Projets cyber</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">4/16</div>
-                        <div class="stat-label">Modules Jedha</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">5</div>
-                        <div class="stat-label">Langages</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">∞</div>
-                        <div class="stat-label">Learning</div>
-                    </div>
-                </div>
-
-                <div class="expertise-grid">
-                    <div class="expertise-item">
-                        <i class="fas fa-database"></i>
-                        <h3>Database administration</h3>
-                        <p>PostgreSQL, MSSQL, Ansible Automation</p>
-                    </div>
-                    <div class="expertise-item">
-                        <i class="fas fa-crown"></i>
-                        <h3>Nim programming</h3>
-                        <p>Educational Malware, Security Tools</p>
-                    </div>
-                    <div class="expertise-item">
-                        <i class="fas fa-bug"></i>
-                        <h3>Red Team</h3>
-                        <p>Web Security, Network Scanning</p>
-                    </div>
-                    <div class="expertise-item">
+        <section id="home" class="hero-section">
+            <div class="card">
+                <div class="card-header">
+                    <div class="glow"></div>
+                    <div class="avatar">
                         <i class="fas fa-shield-alt"></i>
-                        <h3>Blue Team</h3>
-                        <p>Log Analysis, Threat Intelligence</p>
                     </div>
-                    <div class="expertise-item">
-                        <i class="fas fa-plane"></i>
-                        <h3>Pilote de drone</h3>
-                        <p>Diplôme CATT Officiel</p>
+                    <h1 class="title">Clémence Chopin</h1>
+                    <div class="subtitle">
+                        Database Administrator & Cybersecurity Enthusiast
                     </div>
-                    <div class="expertise-item">
-                        <i class="fas fa-spa"></i>
-                        <h3>Élevage de chèvres</h3>
-                        <p>Passion & nature</p>
+                    <div class="badge-container">
+                        <div class="badge">Database Admin</div>
+                        <div class="badge">Nim Lover</div>
+                        <div class="badge">Red Team</div>
+                        <div class="badge">Blue Team</div>
                     </div>
                 </div>
 
-                <div class="btn-container">
-                    <a href="projets.html" class="btn btn-primary">Voir mes projets</a>
-                    <a href="competences.html" class="btn btn-secondary">Mes compétences</a>
-                    <a href="https://github.com/cchopin" target="_blank" class="btn btn-secondary">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                </div>
-            </div>
+                <div class="card-body">
+                    <p class="bio">
+                        Database Administrator passionnée par la cybersécurité
+                        et le langage Nim. Actuellement en formation
+                        Cybersécurité Full Stack chez Jedha, je développe mes
+                        compétences en sécurité offensive et défensive tout en
+                        créant des outils innovants. Mon expertise en bases de
+                        données combinée à ma passion pour la cybersécurité me
+                        permet d'aborder la sécurité des systèmes avec une
+                        perspective unique.
+                    </p>
 
-            <div class="monitor">
-                <div class="pulse"></div>
-                <span>Security monitoring active</span>
-            </div>
-        </div>
-    </section>
+                    <div class="stats">
+                        <div class="stat-card">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Projets cyber</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">5/16</div>
+                            <div class="stat-label">Modules Jedha</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">5</div>
+                            <div class="stat-label">Langages</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">∞</div>
+                            <div class="stat-label">Learning</div>
+                        </div>
+                    </div>
 
-    <section id="formation" class="section">
-        <div class="container">
-            <h2 class="section-title">
-                <i class="fas fa-graduation-cap"></i>
-                Formation & certifications
-            </h2>
-
-            <!-- Formation Jedha -->
-            <div class="formation-card">
-                <div class="formation-header">
-                    <h3>Formation Cybersécurité Full Stack</h3>
-                    <span class="badge">Jedha Bootcamp</span>
-                </div>
-                <div class="progress-container">
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 25%"></div>
-                    </div>
-                    <span class="progress-text">4/16 modules complétés (25%)</span>
-                </div>
-                <div class="modules-grid">
-                    <div class="module completed">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Threat Intelligence</span>
-                    </div>
-                    <div class="module completed">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Email Security</span>
-                    </div>
-                    <div class="module completed">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Databases Security</span>
-                    </div>
-                    <div class="module in-progress">
-                        <i class="fas fa-spinner"></i>
-                        <span>Web Security</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Certifications -->
-            <div class="certifications-section">
-                <h3 class="certifications-title">
-                    <i class="fas fa-certificate"></i>
-                    Certifications
-                </h3>
-
-                <div class="certifications-grid">
-                    <!-- M2I Pentesting -->
-                    <div class="certification-card">
-                        <div class="cert-icon pentest">
+                    <div class="expertise-grid">
+                        <div class="expertise-item">
+                            <i class="fas fa-database"></i>
+                            <h3>Database administration</h3>
+                            <p>PostgreSQL, MSSQL, Ansible Automation</p>
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-crown"></i>
+                            <h3>Nim programming</h3>
+                            <p>Educational Malware, Security Tools</p>
+                        </div>
+                        <div class="expertise-item">
                             <i class="fas fa-bug"></i>
+                            <h3>Red Team</h3>
+                            <p>Web Security, Network Scanning</p>
                         </div>
-                        <h4>Tests d'Intrusion (Pentesting)</h4>
-                        <p class="cert-issuer">M2I Formation</p>
-                        <p class="cert-date">Juin 2025</p>
-                        <p class="cert-id">ID: 2506CLECHO786</p>
-                    </div>
-
-                    <!-- TryHackMe Jr Pentester -->
-                    <div class="certification-card">
-                        <div class="cert-icon thm">
-                            <i class="fas fa-user-ninja"></i>
-                        </div>
-                        <h4>Jr Penetration Tester</h4>
-                        <p class="cert-issuer">TryHackMe</p>
-                        <p class="cert-date">Mai 2025</p>
-                        <p class="cert-id">ID: THM-XTD6YWWIZI</p>
-                    </div>
-
-                    <!-- TryHackMe Cyber Security 101 -->
-                    <div class="certification-card">
-                        <div class="cert-icon thm">
+                        <div class="expertise-item">
                             <i class="fas fa-shield-alt"></i>
+                            <h3>Blue Team</h3>
+                            <p>Log Analysis, Threat Intelligence</p>
                         </div>
-                        <h4>Cyber Security 101</h4>
-                        <p class="cert-issuer">TryHackMe</p>
-                        <p class="cert-date">Avril 2025</p>
-                        <p class="cert-id">ID: THM-UQA4NLRQOF</p>
-                    </div>
-
-                    <!-- TryHackMe Web Fundamentals -->
-                    <div class="certification-card">
-                        <div class="cert-icon thm">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <h4>Web Fundamentals</h4>
-                        <p class="cert-issuer">TryHackMe</p>
-                        <p class="cert-date">Avril 2025</p>
-                        <p class="cert-id">ID: THM-DKHF7OXHG0</p>
-                    </div>
-
-                    <!-- TryHackMe Pre Security -->
-                    <div class="certification-card">
-                        <div class="cert-icon thm">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                        <h4>Pre Security</h4>
-                        <p class="cert-issuer">TryHackMe</p>
-                        <p class="cert-date">Janvier 2025</p>
-                        <p class="cert-id">ID: THM-O0T4A0VUON</p>
-                    </div>
-
-                    <!-- CATT Drone -->
-                    <div class="certification-card">
-                        <div class="cert-icon drone">
+                        <div class="expertise-item">
                             <i class="fas fa-plane"></i>
+                            <h3>Pilote de drone</h3>
+                            <p>Diplôme CATT Officiel</p>
                         </div>
-                        <h4>CATT - Télépilote de Drone</h4>
-                        <p class="cert-issuer">DGAC</p>
-                        <p class="cert-date">Août 2022</p>
-                    </div>
-
-                    <!-- CCAD Animaux -->
-                    <div class="certification-card">
-                        <div class="cert-icon animals">
+                        <div class="expertise-item">
                             <i class="fas fa-spa"></i>
+                            <h3>Élevage de chèvres</h3>
+                            <p>Passion & nature</p>
                         </div>
-                        <h4>CCAD - Certificat de Capacité</h4>
-                        <p class="cert-issuer">DRAAF Nouvelle-Aquitaine</p>
-                        <p class="cert-date">Janvier 2017</p>
-                        <p class="cert-desc">Animaux de compagnie d'espèces domestiques</p>
+                    </div>
+
+                    <div class="btn-container">
+                        <a href="projets.html" class="btn btn-primary"
+                            >Voir mes projets</a
+                        >
+                        <a href="competences.html" class="btn btn-secondary"
+                            >Mes compétences</a
+                        >
+                        <a
+                            href="https://github.com/cchopin"
+                            target="_blank"
+                            class="btn btn-secondary"
+                        >
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="monitor">
+                    <div class="pulse"></div>
+                    <span>Security monitoring active</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="formation" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    Formation & certifications
+                </h2>
+
+                <!-- Formation Jedha -->
+                <div class="formation-card">
+                    <div class="formation-header">
+                        <h3>Formation Cybersécurité Full Stack</h3>
+                        <span class="badge">Jedha Bootcamp</span>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 31%"></div>
+                        </div>
+                        <span class="progress-text"
+                            >5/16 modules complétés (31%)</span
+                        >
+                    </div>
+                    <div class="modules-grid">
+                        <div class="module completed">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Threat Intelligence</span>
+                        </div>
+                        <div class="module completed">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Email Security</span>
+                        </div>
+                        <div class="module completed">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Databases Security</span>
+                        </div>
+                        <div class="module completed">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Web Security</span>
+                        </div>
+                        <div class="module in-progress">
+                            <i class="fas fa-spinner"></i>
+                            <span>Cloud Security</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="certifications-section">
+                    <h3 class="certifications-title">
+                        <i class="fas fa-certificate"></i>
+                        Certifications
+                    </h3>
+
+                    <div class="certifications-grid">
+                        <!-- M2I Pentesting -->
+                        <div class="certification-card">
+                            <div class="cert-icon pentest">
+                                <i class="fas fa-bug"></i>
+                            </div>
+                            <h4>Tests d'Intrusion (Pentesting)</h4>
+                            <p class="cert-issuer">M2I Formation</p>
+                            <p class="cert-date">Juin 2025</p>
+                            <p class="cert-id">ID: 2506CLECHO786</p>
+                        </div>
+
+                        <!-- TryHackMe Jr Pentester -->
+                        <div class="certification-card">
+                            <div class="cert-icon thm">
+                                <i class="fas fa-user-ninja"></i>
+                            </div>
+                            <h4>Jr Penetration Tester</h4>
+                            <p class="cert-issuer">TryHackMe</p>
+                            <p class="cert-date">Mai 2025</p>
+                            <p class="cert-id">ID: THM-XTD6YWWIZI</p>
+                        </div>
+
+                        <!-- TryHackMe Cyber Security 101 -->
+                        <div class="certification-card">
+                            <div class="cert-icon thm">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4>Cyber Security 101</h4>
+                            <p class="cert-issuer">TryHackMe</p>
+                            <p class="cert-date">Avril 2025</p>
+                            <p class="cert-id">ID: THM-UQA4NLRQOF</p>
+                        </div>
+
+                        <!-- TryHackMe Web Fundamentals -->
+                        <div class="certification-card">
+                            <div class="cert-icon thm">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h4>Web Fundamentals</h4>
+                            <p class="cert-issuer">TryHackMe</p>
+                            <p class="cert-date">Avril 2025</p>
+                            <p class="cert-id">ID: THM-DKHF7OXHG0</p>
+                        </div>
+
+                        <!-- TryHackMe Pre Security -->
+                        <div class="certification-card">
+                            <div class="cert-icon thm">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <h4>Pre Security</h4>
+                            <p class="cert-issuer">TryHackMe</p>
+                            <p class="cert-date">Janvier 2025</p>
+                            <p class="cert-id">ID: THM-O0T4A0VUON</p>
+                        </div>
+
+                        <!-- CATT Drone -->
+                        <div class="certification-card">
+                            <div class="cert-icon drone">
+                                <i class="fas fa-plane"></i>
+                            </div>
+                            <h4>CATT - Télépilote de Drone</h4>
+                            <p class="cert-issuer">DGAC</p>
+                            <p class="cert-date">Août 2022</p>
+                        </div>
+
+                        <!-- CCAD Animaux -->
+                        <div class="certification-card">
+                            <div class="cert-icon animals">
+                                <i class="fas fa-spa"></i>
+                            </div>
+                            <h4>CCAD - Certificat de Capacité</h4>
+                            <p class="cert-issuer">DRAAF Nouvelle-Aquitaine</p>
+                            <p class="cert-date">Janvier 2017</p>
+                            <p class="cert-desc">
+                                Animaux de compagnie d'espèces domestiques
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="section section-dark">
-        <div class="container">
-            <h2 class="section-title">
-                <i class="fas fa-envelope"></i>
-                Contact
-            </h2>
-            <div class="contact-content">
-                <p>Intéressé par une collaboration, un projet ou simplement échanger sur la cybersécurité ?</p>
-                <div class="social-links">
-                    <a href="https://github.com/cchopin" target="_blank" class="social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/clemence-chopin/" target="_blank" class="social-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
+        <section id="contact" class="section section-dark">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-envelope"></i>
+                    Contact
+                </h2>
+                <div class="contact-content">
+                    <p>
+                        Intéressé par une collaboration, un projet ou simplement
+                        échanger sur la cybersécurité ?
+                    </p>
+                    <div class="social-links">
+                        <a
+                            href="https://github.com/cchopin"
+                            target="_blank"
+                            class="social-link"
+                        >
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/clemence-chopin/"
+                            target="_blank"
+                            class="social-link"
+                        >
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Clémence Chopin - DBA & Cybersecurity Enthusiast</p>
-            <p class="footer-note">Built with <i class="fas fa-heart"></i> and code</p>
-        </div>
-    </footer>
+        <footer class="footer">
+            <div class="container">
+                <p>
+                    &copy; 2025 Clémence Chopin - DBA & Cybersecurity Enthusiast
+                </p>
+                <p class="footer-note">
+                    Built with <i class="fas fa-heart"></i> and code
+                </p>
+            </div>
+        </footer>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="js/matrix.js"></script>
-    <script src="js/main.js"></script>
-</body>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <script src="js/matrix.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>
