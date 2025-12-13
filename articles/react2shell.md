@@ -516,15 +516,17 @@ sur le serveur, menant à :
 Mettre à jour Next.js vers la version [version corrigée]
 ```
 
-## Analogie finale avec les chèvres
+## Ce que Ragnar m'a appris sur la sécurité
 
-Mes chèvres m'ont encore appris quelque chose sur la sécurité.
+En rentrant du boulot ce soir-là, j'ai trouvé Ragnar dans le potager. Encore. Elle avait découvert que le nouveau portail automatique s'ouvrait pour n'importe quelle chèvre qui se présentait devant le capteur, sans vérifier si c'était moi qui l'avais autorisée à sortir.
 
-**Ragnar et le protocole Flight** : Ragnar a compris que je fais confiance à n'importe quelle chèvre qui se présente à la porte de l'enclos. Alors elle envoie les autres chèvres me distraire pendant qu'elle s'échappe par derrière. Le protocole Flight fait pareil : il fait confiance aux données entrantes sans vérifier leur légitimité.
+Le protocole Flight, c'est mon portail. Il fait confiance à tout ce qui arrive, sans poser de questions.
 
-**La désérialisation** : Quand je reçois un paquet de nourriture pour chèvres, je l'ouvre et je le verse sans vérifier ce qu'il y a dedans. Un jour, il y avait des cailloux mélangés au grain (merci le fournisseur discount). La désérialisation non sécurisée, c'est pareil : on traite les données sans vérifier ce qu'elles contiennent vraiment.
+J'ai aussi repensé à ce sac de granulés discount que j'avais acheté le mois dernier. Je l'avais ouvert et versé directement dans la mangeoire sans regarder. Il y avait des cailloux dedans. Heureusement, les chèvres sont plus malignes que moi et les ont triés. Mais un serveur qui désérialise des données malveillantes n'a pas cet instinct de survie.
 
-**La surface d'attaque** : J'ai une grande clôture avec plein de points d'entrée potentiels. Plus la clôture est grande, plus il y a de chances qu'une chèvre trouve une faille. Next.js est partout, donc la surface d'attaque est énorme.
+Et puis il y a ma clôture. Cinquante mètres de grillage avec des dizaines de poteaux, de jointures, de points de faiblesse potentiels. Plus elle est grande, plus Ragnar a de chances de trouver LA faille. Next.js est déployé sur des millions de serveurs. La surface d'attaque est colossale.
+
+Finalement, mes chèvres font du pentest sans le savoir. Elles testent mes défenses en permanence, trouvent les failles, et les exploitent sans vergogne. La différence, c'est qu'elles visent mon potager, pas mes données.
 
 ## Ce qu'il faut retenir
 
