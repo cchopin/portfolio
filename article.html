@@ -110,10 +110,18 @@
                         document.title = h1.textContent + ' - Clémence Chopin';
                     }
 
-                    // Render Mermaid diagrams
-                    mermaid.contentLoaded();
+                    // Transform mermaid code blocks into mermaid divs
+                    document.querySelectorAll('pre code.language-mermaid').forEach((block) => {
+                        const mermaidDiv = document.createElement('div');
+                        mermaidDiv.className = 'mermaid';
+                        mermaidDiv.textContent = block.textContent;
+                        block.parentElement.replaceWith(mermaidDiv);
+                    });
 
-                    // Apply syntax highlighting
+                    // Render Mermaid diagrams
+                    mermaid.run();
+
+                    // Apply syntax highlighting to non-mermaid code blocks
                     document.querySelectorAll('pre code').forEach((block) => {
                         hljs.highlightElement(block);
                     });
