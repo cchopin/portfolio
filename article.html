@@ -60,24 +60,37 @@
     <script>
         // Initialize Mermaid
         mermaid.initialize({
-            startOnLoad: true,
-            theme: 'dark',
+            startOnLoad: false,
+            theme: 'base',
             securityLevel: 'loose',
             themeVariables: {
+                darkMode: true,
+                background: 'transparent',
                 primaryColor: '#3b82f6',
                 primaryTextColor: '#e2e8f0',
                 primaryBorderColor: '#4b5563',
                 lineColor: '#6b7280',
                 secondaryColor: '#1e293b',
                 tertiaryColor: '#0f172a',
-                background: '#1e293b',
                 mainBkg: '#1e293b',
                 nodeBorder: '#4b5563',
                 clusterBkg: '#0f172a',
                 titleColor: '#e2e8f0',
                 edgeLabelBackground: '#1e293b',
                 textColor: '#e2e8f0',
-                nodeTextColor: '#e2e8f0'
+                nodeTextColor: '#e2e8f0',
+                actorBkg: '#1e293b',
+                actorTextColor: '#e2e8f0',
+                actorLineColor: '#6b7280',
+                signalColor: '#e2e8f0',
+                signalTextColor: '#e2e8f0',
+                labelBoxBkgColor: '#1e293b',
+                labelBoxBorderColor: '#4b5563',
+                labelTextColor: '#e2e8f0',
+                loopTextColor: '#e2e8f0',
+                noteBkgColor: '#374151',
+                noteTextColor: '#e2e8f0',
+                noteBorderColor: '#4b5563'
             }
         });
 
@@ -135,19 +148,20 @@
                     });
 
                     // Render Mermaid diagrams
-                    mermaid.run().then(() => {
-                        // Force dark background on all mermaid SVGs
-                        document.querySelectorAll('.mermaid svg').forEach(svg => {
-                            svg.style.backgroundColor = 'transparent';
-                            // Remove white background rects
-                            svg.querySelectorAll('rect').forEach(rect => {
-                                const fill = rect.getAttribute('fill');
-                                if (fill === 'white' || fill === '#ffffff' || fill === '#fff' || fill === 'rgb(255, 255, 255)') {
-                                    rect.setAttribute('fill', 'transparent');
+                    const mermaidDivs = document.querySelectorAll('.mermaid');
+                    if (mermaidDivs.length > 0) {
+                        mermaid.run({ nodes: mermaidDivs }).then(() => {
+                            // Force transparent background on all mermaid SVGs
+                            document.querySelectorAll('.mermaid svg').forEach(svg => {
+                                svg.style.background = 'transparent';
+                                // Find and make transparent the background rect (usually first rect)
+                                const bgRect = svg.querySelector('rect');
+                                if (bgRect) {
+                                    bgRect.setAttribute('fill', 'transparent');
                                 }
                             });
                         });
-                    });
+                    }
 
                     // Apply syntax highlighting to non-mermaid code blocks
                     document.querySelectorAll('pre code').forEach((block) => {
