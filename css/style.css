@@ -1392,52 +1392,11 @@ body {
 }
 
 .mermaid {
-    background: #1e293b !important;
+    background: #1e293b;
     padding: 1rem;
     border-radius: 8px;
     margin: 1.5rem 0;
     border: 1px solid #4b5563;
-}
-
-.mermaid svg {
-    background: transparent !important;
-}
-
-.mermaid .messageText,
-.mermaid .loopText,
-.mermaid text {
-    fill: #e2e8f0 !important;
-}
-
-.mermaid .actor {
-    fill: #1e293b !important;
-    stroke: #4b5563 !important;
-}
-
-.mermaid .actor-line {
-    stroke: #6b7280 !important;
-}
-
-.mermaid line {
-    stroke: #6b7280 !important;
-}
-
-.mermaid .messageLine0,
-.mermaid .messageLine1 {
-    stroke: #6b7280 !important;
-}
-
-.mermaid .note {
-    fill: #374151 !important;
-    stroke: #4b5563 !important;
-}
-
-.mermaid .loopLine {
-    stroke: #4b5563 !important;
-}
-
-.mermaid rect.actor {
-    fill: #1e293b !important;
 }
 
 /* Code syntax highlighting */

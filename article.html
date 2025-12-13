@@ -135,7 +135,19 @@
                     });
 
                     // Render Mermaid diagrams
-                    mermaid.run();
+                    mermaid.run().then(() => {
+                        // Force dark background on all mermaid SVGs
+                        document.querySelectorAll('.mermaid svg').forEach(svg => {
+                            svg.style.backgroundColor = 'transparent';
+                            // Remove white background rects
+                            svg.querySelectorAll('rect').forEach(rect => {
+                                const fill = rect.getAttribute('fill');
+                                if (fill === 'white' || fill === '#ffffff' || fill === '#fff' || fill === 'rgb(255, 255, 255)') {
+                                    rect.setAttribute('fill', 'transparent');
+                                }
+                            });
+                        });
+                    });
 
                     // Apply syntax highlighting to non-mermaid code blocks
                     document.querySelectorAll('pre code').forEach((block) => {
