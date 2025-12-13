@@ -243,7 +243,9 @@ Une extension permet de détecter automatiquement la vulnérabilité en naviguan
 4. Si oui, elle permet même de tester des commandes
 ```
 
-C'est pratique pour une validation rapide, mais pour un vrai pentest, on passe à Burp Suite.
+C'est pratique pour une validation rapide, mais pour un vrai pentest, on passe à un proxy d'interception.
+
+> **Note sur les outils** : Dans cet article j'utilise Burp Suite parce que c'est la référence historique. Mais honnêtement ? En 2025, [Caido](https://medium.com/@telynor_51425/caido-k%C3%A9zako-d9ece6926f92) est largement supérieur. Interface moderne, plus rapide, plus intuitif. Burp a une interface qui ressemble à un logiciel comptable des années 90. Caido, c'est comme si quelqu'un avait enfin décidé que les pentesters méritaient un outil du 21ème siècle. Adaptez les étapes suivantes selon votre outil préféré.
 
 ### Étape 2.3 : validation manuelle avec curl
 
@@ -532,7 +534,7 @@ Finalement, mes chèvres font du pentest sans le savoir. Elles testent mes défe
 
 **Pour les pentesters** :
 - Nuclei + template CVE = validation rapide
-- Burp Suite pour l'exploitation manuelle
+- Caido ou Burp Suite pour l'exploitation manuelle (Caido de préférence, votre santé mentale vous remerciera)
 - Techniques OOB quand pas de retour direct
 - Documenter proprement pour le rapport
 
