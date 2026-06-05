@@ -1526,6 +1526,27 @@ body {
 /* ===========================
    Formation (new)
    =========================== */
+.formation-subtitle {
+    font-size: 0.82rem;
+    color: var(--text-tertiary);
+    margin-top: 0.25rem;
+    font-style: italic;
+}
+
+.rncp-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0.15rem 0.45rem;
+    border-radius: 3px;
+    background-color: rgba(0, 240, 255, 0.08);
+    color: var(--accent);
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    vertical-align: middle;
+    margin-left: 0.4rem;
+}
+
 .cert-badge {
     background-color: rgba(0, 240, 255, 0.08);
     color: var(--accent);
