@@ -1089,6 +1089,33 @@ body {
     .article-card {
         padding: 1.5rem;
     }
+
+    .hero-name {
+        font-size: 2.5rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .hero-actions .btn {
+        text-align: center;
+    }
+
+    .cert-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    .cert-meta {
+        gap: 0.75rem;
+    }
+
+    .cert-id-inline {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1105,29 +1132,17 @@ body {
         font-size: 0.8rem;
     }
 
-    .card-header,
-    .card-body {
-        padding: 1.5rem;
-    }
-
-    .avatar {
-        width: 80px;
-        height: 80px;
+    .hero-name {
         font-size: 2rem;
     }
 
-    .title {
-        font-size: 1.5rem;
+    .hero-bio {
+        font-size: 0.95rem;
     }
 
-    .stat-number {
-        font-size: 1.5rem;
-    }
-
-    .social-link {
-        width: 50px;
-        height: 50px;
-        font-size: 1.2rem;
+    .cert-meta {
+        flex-wrap: wrap;
+        gap: 0.5rem;
     }
 }
 
@@ -1403,6 +1418,197 @@ body {
 .language-bash, .language-python, .language-sql, .language-java,
 .language-php, .language-javascript, .language-yaml {
     display: block;
+}
+
+/* ===========================
+   Hero (new)
+   =========================== */
+.hero-content {
+    max-width: 760px;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.hero-eyebrow {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+}
+
+.hero-name {
+    font-size: 3.75rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+}
+
+.hero-bio {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.85;
+    margin-bottom: 2rem;
+    max-width: 640px;
+}
+
+.hero-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.hero-stack span {
+    background-color: rgba(0, 240, 255, 0.07);
+    color: var(--text-tertiary);
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+    font-size: 0.82rem;
+    font-family: 'Courier New', monospace;
+    border: 1px solid rgba(0, 240, 255, 0.12);
+    transition: var(--transition);
+}
+
+.hero-stack span:hover {
+    color: var(--accent);
+    border-color: rgba(0, 240, 255, 0.3);
+    background-color: rgba(0, 240, 255, 0.1);
+}
+
+.hero-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.hero-actions .btn {
+    padding: 0.75rem 1.5rem;
+    min-width: 120px;
+}
+
+/* ===========================
+   Formation (new)
+   =========================== */
+.cert-badge {
+    background-color: rgba(0, 240, 255, 0.08);
+    color: var(--accent);
+    padding: 0.3rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(0, 240, 255, 0.18);
+    white-space: nowrap;
+}
+
+.modules-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+}
+
+.module-tag {
+    background-color: rgba(0, 255, 136, 0.07);
+    color: var(--success);
+    padding: 0.3rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.82rem;
+    border: 1px solid rgba(0, 255, 136, 0.15);
+}
+
+.module-tag.module-active {
+    background-color: rgba(255, 170, 0, 0.07);
+    color: var(--warning);
+    border-color: rgba(255, 170, 0, 0.18);
+}
+
+/* ===========================
+   Certifications list (new)
+   =========================== */
+.certifications-list {
+    margin-top: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.cert-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    transition: background-color 0.2s;
+}
+
+.cert-row:last-child {
+    border-bottom: none;
+}
+
+.cert-row:hover {
+    background-color: rgba(255, 255, 255, 0.025);
+}
+
+.cert-name {
+    font-size: 0.95rem;
+    color: var(--text);
+    font-weight: 500;
+    flex: 1;
+}
+
+.cert-meta {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.cert-issuer-inline {
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.cert-date-inline {
+    font-size: 0.82rem;
+    color: var(--text-tertiary);
+    white-space: nowrap;
+}
+
+.cert-id-inline {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.25);
+    font-family: 'Courier New', monospace;
+    white-space: nowrap;
+}
+
+/* ===========================
+   Contact (new)
+   =========================== */
+.social-link-text {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    border-radius: 6px;
+    background-color: var(--surface-hover);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.social-link-text:hover {
+    background-color: rgba(0, 240, 255, 0.1);
+    color: var(--accent);
+    border-color: rgba(0, 240, 255, 0.25);
+    transform: translateY(-2px);
 }
 
 /* ===========================
