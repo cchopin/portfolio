@@ -3,18 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article - Clémence Chopin</title>
+    <title>Article — Clémence Chopin</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <canvas id="matrix-canvas"></canvas>
-
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <i class="fas fa-terminal"></i>
-            </div>
+            <div class="nav-logo">CC</div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Accueil</a></li>
                 <li><a href="projets.html" class="nav-link">Projets</a></li>
@@ -27,15 +23,10 @@
 
     <section class="section" style="padding-top: 8rem;">
         <div class="container">
-            <a href="articles.html" class="back-button">
-                <i class="fas fa-arrow-left"></i>
-                Retour aux articles
-            </a>
-
+            <a href="articles.html" class="back-button">← Retour aux articles</a>
             <div class="article-container">
                 <div id="article-content" class="article-content">
                     <div class="loading">
-                        <i class="fas fa-spinner fa-spin" style="font-size: 3rem;"></i>
                         <p>Chargement de l'article...</p>
                     </div>
                 </div>
@@ -45,21 +36,17 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Clémence Chopin - DBA & Cybersecurity Enthusiast</p>
-            <p class="footer-note">Built with <i class="fas fa-heart"></i> and code</p>
+            <p>&copy; 2025 Clémence Chopin</p>
         </div>
     </footer>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
-    <script src="js/matrix.js"></script>
     <script src="js/main.js"></script>
 
     <script>
-        // Initialize Mermaid
         mermaid.initialize({
             startOnLoad: false,
             theme: 'base',
@@ -95,28 +82,18 @@
             }
         });
 
-        // Get article filename from URL parameter
         const urlParams = new URLSearchParams(window.location.search);
         const articleFile = urlParams.get('file');
 
         if (!articleFile) {
-            document.getElementById('article-content').innerHTML = `
-                <div class="error">
-                    <i class="fas fa-exclamation-triangle" style="font-size: 3rem;"></i>
-                    <p>Aucun article spécifié</p>
-                </div>
-            `;
+            document.getElementById('article-content').innerHTML = '<div class="error"><p>Aucun article spécifié</p></div>';
         } else {
-            // Load and render markdown article
             fetch(`articles/${articleFile}.md`)
                 .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Article non trouvé');
-                    }
+                    if (!response.ok) throw new Error('Article non trouvé');
                     return response.text();
                 })
                 .then(markdown => {
-                    // Configure marked options
                     marked.setOptions({
                         breaks: true,
                         gfm: true,
@@ -130,17 +107,12 @@
                         }
                     });
 
-                    // Convert markdown to HTML
                     const html = marked.parse(markdown);
                     document.getElementById('article-content').innerHTML = html;
 
-                    // Update page title
                     const h1 = document.querySelector('.article-content h1');
-                    if (h1) {
-                        document.title = h1.textContent + ' - Clémence Chopin';
-                    }
+                    if (h1) document.title = h1.textContent + ' — Clémence Chopin';
 
-                    // Transform mermaid code blocks into mermaid divs
                     document.querySelectorAll('pre code.language-mermaid').forEach((block) => {
                         const mermaidDiv = document.createElement('div');
                         mermaidDiv.className = 'mermaid';
@@ -148,35 +120,24 @@
                         block.parentElement.replaceWith(mermaidDiv);
                     });
 
-                    // Render Mermaid diagrams
                     const mermaidDivs = document.querySelectorAll('.mermaid');
                     if (mermaidDivs.length > 0) {
                         mermaid.run({ nodes: mermaidDivs }).then(() => {
-                            // Force transparent background on all mermaid SVGs
                             document.querySelectorAll('.mermaid svg').forEach(svg => {
                                 svg.style.background = 'transparent';
-                                // Find and make transparent the background rect (usually first rect)
                                 const bgRect = svg.querySelector('rect');
-                                if (bgRect) {
-                                    bgRect.setAttribute('fill', 'transparent');
-                                }
+                                if (bgRect) bgRect.setAttribute('fill', 'transparent');
                             });
                         });
                     }
 
-                    // Apply syntax highlighting to non-mermaid code blocks
                     document.querySelectorAll('pre code').forEach((block) => {
                         hljs.highlightElement(block);
                     });
                 })
                 .catch(error => {
-                    document.getElementById('article-content').innerHTML = `
-                        <div class="error">
-                            <i class="fas fa-exclamation-triangle" style="font-size: 3rem;"></i>
-                            <p>Erreur lors du chargement de l'article</p>
-                            <p style="font-size: 0.9rem; margin-top: 1rem;">${error.message}</p>
-                        </div>
-                    `;
+                    document.getElementById('article-content').innerHTML =
+                        `<div class="error"><p>Erreur lors du chargement de l'article</p><p style="font-size: 0.9rem; margin-top: 1rem;">${error.message}</p></div>`;
                 });
         }
     </script>

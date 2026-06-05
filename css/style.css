@@ -1421,6 +1421,39 @@ body {
 }
 
 /* ===========================
+   Page header (fix sans icônes)
+   =========================== */
+.page-header h1 {
+    display: block;
+}
+
+/* ===========================
+   Skill level badges
+   =========================== */
+.skill-level-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.2rem 0.55rem;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.skill-level-badge.senior {
+    background-color: rgba(0, 240, 255, 0.1);
+    color: var(--accent);
+    border: 1px solid rgba(0, 240, 255, 0.25);
+}
+
+.skill-level-badge.confirmed {
+    background-color: rgba(0, 255, 136, 0.08);
+    color: var(--success);
+    border: 1px solid rgba(0, 255, 136, 0.2);
+}
+
+/* ===========================
    Hero (new)
    =========================== */
 .hero-content {

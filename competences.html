@@ -3,194 +3,122 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Compétences - Clémence Chopin</title>
+        <title>Compétences — Clémence Chopin</title>
         <link rel="stylesheet" href="css/style.css" />
         <link rel="icon" href="favicon.ico" type="image/x-icon">
     </head>
     <body>
-        <canvas id="matrix-canvas"></canvas>
-
         <nav class="navbar">
             <div class="nav-container">
-                <div class="nav-logo">
-                    <i class="fas fa-terminal"></i>
-                </div>
+                <div class="nav-logo">CC</div>
                 <ul class="nav-menu">
                     <li><a href="index.html" class="nav-link">Accueil</a></li>
                     <li><a href="projets.html" class="nav-link">Projets</a></li>
-                    <li>
-                        <a href="competences.html" class="nav-link active"
-                            >Compétences</a
-                        >
-                    </li>
-                    <li>
-                        <a href="articles.html" class="nav-link">Articles</a>
-                    </li>
-                    <li>
-                        <a href="index.html#contact" class="nav-link"
-                            >Contact</a
-                        >
-                    </li>
+                    <li><a href="competences.html" class="nav-link active">Compétences</a></li>
+                    <li><a href="articles.html" class="nav-link">Articles</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
                 </ul>
             </div>
         </nav>
 
         <section class="page-header">
             <div class="container">
-                <h1><i class="fas fa-tools"></i> Compétences & Expertise</h1>
-                <p>
-                    Technologies maîtrisées à travers mes projets et ma
-                    formation
-                </p>
+                <h1>Compétences</h1>
+                <p>Administration de bases de données · Sécurité opérationnelle</p>
             </div>
         </section>
 
         <section class="section">
             <div class="container">
+
                 <!-- Database Administration -->
                 <div class="skills-section">
-                    <h2 class="skills-title">
-                        <i class="fas fa-database"></i>
-                        Database administration
-                    </h2>
+                    <h2 class="skills-title">Database Administration</h2>
                     <div class="skills-grid">
                         <div class="skill-card">
                             <div class="skill-header">
-                                <i class="fas fa-server"></i>
-                                <h3>PostgreSQL</h3>
-                            </div>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 75%"></div>
-                            </div>
-                            <ul class="skill-list">
-                                <li>Administration & maintenance</li>
-                                <li>Gestion des rôles et permissions</li>
-                                <li>Sécurisation des accès</li>
-                                <li>Automatisation avec Ansible</li>
-                                <li>Intégration LDAP</li>
-                            </ul>
-                        </div>
-
-                        <div class="skill-card">
-                            <div class="skill-header">
-                                <i class="fas fa-database"></i>
                                 <h3>MSSQL</h3>
-                            </div>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 95%"></div>
+                                <span class="skill-level-badge senior">Senior</span>
                             </div>
                             <ul class="skill-list">
-                                <li>Administration basique</li>
-                                <li>Gestion des utilisateurs</li>
-                                <li>Scripts d'automatisation</li>
-                                <li>Sécurisation</li>
+                                <li>T-SQL avancé — CTEs, fonctions analytiques, dynamic SQL</li>
+                                <li>Query tuning & analyse de plans d'exécution</li>
+                                <li>Index management — clustered, non-clustered, filtré, columnstore</li>
+                                <li>High Availability — Always On AG, log shipping</li>
+                                <li>Gestion des droits — rôles, schémas, chiffrement</li>
+                                <li>Backup & restore, stratégie PRA</li>
+                                <li>Deadlocks — détection, investigation, résolution</li>
+                                <li>Monitoring — DMVs, SQL Agent, alertes</li>
+                                <li>Maintenance plans — index rebuild, update statistics</li>
                             </ul>
                         </div>
 
                         <div class="skill-card">
                             <div class="skill-header">
-                                <i class="fas fa-robot"></i>
+                                <h3>PostgreSQL</h3>
+                                <span class="skill-level-badge confirmed">Confirmée</span>
+                            </div>
+                            <ul class="skill-list">
+                                <li>Administration & maintenance — vacuum, analyze, reindex</li>
+                                <li>Gestion des rôles, schémas et permissions</li>
+                                <li>Sécurisation — pg_hba.conf, SSL/TLS, audit</li>
+                                <li>Performance — EXPLAIN ANALYZE, pg_stat_*, paramétrage</li>
+                                <li>Automatisation via Ansible & ldap2pg</li>
+                                <li>Intégration LDAP/AD</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-header">
                                 <h3>Automatisation</h3>
                             </div>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 65%"></div>
-                            </div>
                             <ul class="skill-list">
-                                <li>Ansible Playbooks</li>
-                                <li>AWX pour orchestration</li>
-                                <li>Scripts de gestion SQL</li>
-                                <li>ldap2pg pour sync LDAP</li>
+                                <li>Ansible Playbooks — déploiement, configuration, conformité</li>
+                                <li>AWX/Tower — orchestration et scheduling</li>
+                                <li>ldap2pg — synchronisation LDAP vers BDD</li>
+                                <li>Scripts d'audit et de contrôle de droits</li>
+                                <li>Docker & Docker Compose</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- Development -->
+                <!-- Security Operations -->
                 <div class="skills-section">
-                    <h2 class="skills-title">
-                        <i class="fas fa-code"></i>
-                        Développement & Scripting
-                    </h2>
+                    <h2 class="skills-title">Security Operations</h2>
                     <div class="skills-grid">
                         <div class="skill-card">
                             <div class="skill-header">
-                                <i class="fab fa-python"></i>
-                                <h3>Python</h3>
-                            </div>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 70%"></div>
+                                <h3>Vulnerability Management</h3>
                             </div>
                             <ul class="skill-list">
-                                <li>Flask pour applications web</li>
-                                <li>Analyseur de logs (Nginx)</li>
-                                <li>Scripts de sécurité</li>
-                                <li>API REST</li>
-                                <li>Parsing et traitement de données</li>
+                                <li>Qualys — scan de vulnérabilités, gestion de la surface d'attaque</li>
+                                <li>Remediation tracking & priorisation</li>
+                                <li>Analyse de CVEs et qualification d'impact</li>
                             </ul>
                         </div>
 
                         <div class="skill-card">
                             <div class="skill-header">
-                                <i class="fas fa-crown"></i>
-                                <h3>Nim</h3>
-                            </div>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 65%"></div>
+                                <h3>Threat Intelligence</h3>
                             </div>
                             <ul class="skill-list">
-                                <li>Malware éducatif (NimRAT)</li>
-                                <li>System Programming</li>
-                                <li>Cross-compilation Windows/Linux</li>
-                                <li>WinAPI & Windows Registry</li>
-                                <li>Techniques d'évasion</li>
+                                <li>OpenCTI — renseignement sur les menaces au quotidien</li>
+                                <li>Cartographie de menaces, analyse de groupes APT</li>
+                                <li>MITRE ATT&CK — corrélation TTPs</li>
+                                <li>OSINT</li>
                             </ul>
                         </div>
 
                         <div class="skill-card">
                             <div class="skill-header">
-                                <i class="fas fa-terminal"></i>
-                                <h3>Bash</h3>
-                            </div>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 85%"></div>
+                                <h3>Monitoring & Automatisation</h3>
                             </div>
                             <ul class="skill-list">
-                                <li>Scripts d'automatisation</li>
-                                <li>Port Scanner</li>
-                                <li>System administration</li>
-                                <li>File manipulation</li>
-                            </ul>
-                        </div>
-
-                        <div class="skill-card">
-                            <div class="skill-header">
-                                <i class="fas fa-database"></i>
-                                <h3>SQL</h3>
-                            </div>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 95%"></div>
-                            </div>
-                            <ul class="skill-list">
-                                <li>Requêtes complexes</li>
-                                <li>Optimisation de performances</li>
-                                <li>Sécurisation (injections)</li>
-                                <li>Gestion des privilèges</li>
-                            </ul>
-                        </div>
-
-                        <div class="skill-card">
-                            <div class="skill-header">
-                                <i class="fab fa-html5"></i>
-                                <h3>Web</h3>
-                            </div>
-                            <div class="skill-level">
-                                <div class="level-bar" style="width: 65%"></div>
-                            </div>
-                            <ul class="skill-list">
-                                <li>HTML5 / CSS3</li>
-                                <li>JavaScript vanilla</li>
-                                <li>Flask + Jinja2</li>
-                                <li>Serveur HTTP custom en Python</li>
+                                <li>Cloudflare — WAF, protection DDoS, règles de filtrage</li>
+                                <li>Veille CVE automatisée via n8n (collecte, enrichissement, notification)</li>
+                                <li>Analyse de logs — détection de patterns malveillants</li>
+                                <li>Email Security — SPF/DKIM/DMARC, analyse de phishing</li>
                             </ul>
                         </div>
                     </div>
@@ -198,276 +126,118 @@
 
                 <!-- Offensive Security -->
                 <div class="skills-section">
-                    <h2 class="skills-title">
-                        <i class="fas fa-bug"></i>
-                        Offensive Security (Formation Jedha)
-                    </h2>
+                    <h2 class="skills-title">Offensive Security</h2>
                     <div class="skills-grid">
                         <div class="skill-card">
                             <div class="skill-header">
-                                <i class="fas fa-globe"></i>
                                 <h3>Web Security</h3>
                             </div>
                             <ul class="skill-list">
-                                <li>SQL Injection (démos complètes)</li>
-                                <li>Cross-Site Scripting (XSS)</li>
-                                <li>CSRF</li>
-                                <li>Path Traversal</li>
-                                <li>Command Injection</li>
+                                <li>SQL Injection — in-band, blind, out-of-band</li>
+                                <li>XSS, CSRF, Path Traversal, Command Injection</li>
+                                <li>Nuclei — templates personnalisés, intégration Shodan</li>
+                                <li>Burp Suite / Caido</li>
                             </ul>
                         </div>
 
                         <div class="skill-card">
                             <div class="skill-header">
-                                <i class="fas fa-network-wired"></i>
-                                <h3>Network Security</h3>
-                            </div>
-                            <ul class="skill-list">
-                                <li>Port Scanning (Bash custom)</li>
-                                <li>Service Enumeration</li>
-                                <li>Network Reconnaissance</li>
-                            </ul>
-                        </div>
-
-                        <div class="skill-card">
-                            <div class="skill-header">
-                                <i class="fas fa-virus"></i>
                                 <h3>Malware Research</h3>
                             </div>
                             <ul class="skill-list">
-                                <li>Educational RAT en Nim</li>
-                                <li>Techniques de persistence</li>
-                                <li>Anti-VM & Anti-Debug</li>
-                                <li>C2 Communication</li>
-                                <li>DLL & Shellcode Injection</li>
+                                <li>Développement en Nim (NimRAT educational)</li>
+                                <li>Techniques de persistence — Registre, Hosts</li>
+                                <li>Évasion — Anti-VM, Anti-Debug</li>
+                                <li>C2 Communication, DLL & Shellcode Injection</li>
                             </ul>
                         </div>
 
                         <div class="skill-card">
                             <div class="skill-header">
-                                <i class="fas fa-wifi"></i>
-                                <h3>Hardware Hacking</h3>
+                                <h3>Hardware & Réseau</h3>
                             </div>
                             <ul class="skill-list">
-                                <li>Flipper Zero</li>
-                                <li>ESP32 Development</li>
-                                <li>Evil Portal / Captive Portal</li>
-                                <li>WiFi Phishing</li>
+                                <li>Flipper Zero — captive portals, Evil Portal</li>
+                                <li>ESP32 — développement WiFi</li>
+                                <li>Reconnaissance réseau, scan de ports</li>
+                                <li>MITM, ARP Poisoning, DNS Spoofing</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- Defensive Security -->
+                <!-- Développement & Scripting -->
                 <div class="skills-section">
-                    <h2 class="skills-title">
-                        <i class="fas fa-shield-alt"></i>
-                        Defensive Security (Formation Jedha)
-                    </h2>
+                    <h2 class="skills-title">Développement & Scripting</h2>
                     <div class="skills-grid">
                         <div class="skill-card">
                             <div class="skill-header">
-                                <i class="fas fa-chart-line"></i>
-                                <h3>Log Analysis</h3>
+                                <h3>Python</h3>
                             </div>
                             <ul class="skill-list">
-                                <li>Nginx Attack Parser (projet perso)</li>
-                                <li>Détection de patterns malveillants</li>
-                                <li>IP Reputation (AbuseIPDB)</li>
-                                <li>Reporting de sécurité</li>
+                                <li>Flask — applications web, APIs REST</li>
+                                <li>Scripts de sécurité et d'analyse de logs</li>
+                                <li>Parsing et traitement de données</li>
                             </ul>
                         </div>
 
                         <div class="skill-card">
                             <div class="skill-header">
-                                <i class="fas fa-brain"></i>
-                                <h3>Threat Intelligence</h3>
+                                <h3>Nim</h3>
                             </div>
                             <ul class="skill-list">
-                                <li>MITRE ATT&CK Framework</li>
-                                <li>OpenCTI Platform</li>
-                                <li>Analyse de groupes APT</li>
-                                <li>OSINT</li>
+                                <li>System programming, cross-compilation Windows/Linux</li>
+                                <li>WinAPI & Windows Registry</li>
+                                <li>Outils de sécurité offensifs (éducatif)</li>
                             </ul>
                         </div>
 
                         <div class="skill-card">
                             <div class="skill-header">
-                                <i class="fas fa-envelope-open-text"></i>
-                                <h3>Email Security</h3>
+                                <h3>Bash</h3>
                             </div>
                             <ul class="skill-list">
-                                <li>Analyse de phishing</li>
-                                <li>SPF/DKIM/DMARC</li>
-                                <li>Gophish (campagnes de simulation)</li>
-                                <li>Email Header Analysis</li>
+                                <li>Scripts d'automatisation système</li>
+                                <li>Administration et maintenance</li>
+                                <li>Outils de reconnaissance réseau</li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- DevOps Tools -->
-                <div class="skills-section">
-                    <h2 class="skills-title">
-                        <i class="fas fa-cogs"></i>
-                        DevOps & Infrastructure
-                    </h2>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <div class="skill-header">
-                                <i class="fab fa-docker"></i>
-                                <h3>Containerization</h3>
-                            </div>
-                            <ul class="skill-list">
-                                <li>Docker & Docker Compose</li>
-                                <li>Docker Swarm</li>
-                                <li>Déploiement d'applications</li>
-                            </ul>
-                        </div>
-
-                        <div class="skill-card">
-                            <div class="skill-header">
-                                <i class="fas fa-robot"></i>
-                                <h3>Automation</h3>
-                            </div>
-                            <ul class="skill-list">
-                                <li>Ansible Playbooks</li>
-                                <li>AWX/Tower</li>
-                                <li>Infrastructure as Code</li>
-                            </ul>
-                        </div>
-
-                        <div class="skill-card">
-                            <div class="skill-header">
-                                <i class="fab fa-git-alt"></i>
-                                <h3>Version Control</h3>
-                            </div>
-                            <ul class="skill-list">
-                                <li>Git/GitHub</li>
-                                <li>Workflows collaboratifs</li>
-                                <li>Documentation de projets</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Methodologies & Frameworks -->
-                <div class="skills-section">
-                    <h2 class="skills-title">
-                        <i class="fas fa-book-open"></i>
-                        Méthodologies & Frameworks (Formation)
-                    </h2>
-                    <div class="methodologies-grid">
-                        <div class="methodology-card">
-                            <i class="fas fa-shield"></i>
-                            <h4>MITRE ATT&CK</h4>
-                            <p>Analyse de techniques offensives</p>
-                        </div>
-                        <div class="methodology-card">
-                            <i class="fas fa-clipboard-check"></i>
-                            <h4>OWASP Top 10</h4>
-                            <p>Vulnérabilités web critiques</p>
-                        </div>
-                        <div class="methodology-card">
-                            <i class="fas fa-users-cog"></i>
-                            <h4>NIST Framework</h4>
-                            <p>En cours d'apprentissage</p>
-                        </div>
-                        <div class="methodology-card">
-                            <i class="fas fa-balance-scale"></i>
-                            <h4>GDPR</h4>
-                            <p>Compliance (prévu)</p>
-                        </div>
-                        <div class="methodology-card">
-                            <i class="fas fa-certificate"></i>
-                            <h4>ISO 27001</h4>
-                            <p>Standards de sécurité (prévu)</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Tools -->
                 <div class="skills-section">
-                    <h2 class="skills-title">
-                        <i class="fas fa-toolbox"></i>
-                        Outils & Technologies Utilisés
-                    </h2>
+                    <h2 class="skills-title">Outils</h2>
                     <div class="tools-tags">
-                        <span class="tool-tag">Python</span>
-                        <span class="tool-tag"
-                            >Nim <i class="fas fa-heart"></i
-                        ></span>
-                        <span class="tool-tag">Bash</span>
+                        <span class="tool-tag">MSSQL</span>
                         <span class="tool-tag">PostgreSQL</span>
-                        <span class="tool-tag"
-                            >MSSQL <i class="fas fa-heart"></i
-                        ></span>
-                        <span class="tool-tag">Flask</span>
-                        <span class="tool-tag">Docker</span>
-                        <span class="tool-tag">Ansible</span>
-                        <span class="tool-tag">Git/GitHub</span>
-                        <span class="tool-tag">OpenCTI</span>
-                        <span class="tool-tag">Gophish</span>
-                        <span class="tool-tag">Burp Suite</span>
-                        <span class="tool-tag"
-                            >Caido <i class="fas fa-heart"></i
-                        ></span>
-                        <span class="tool-tag">Flipper Zero</span>
-                        <span class="tool-tag">Cloudflare</span>
-                        <span class="tool-tag">LDAP</span>
+                        <span class="tool-tag">Ansible / AWX</span>
                         <span class="tool-tag">Qualys</span>
+                        <span class="tool-tag">OpenCTI</span>
+                        <span class="tool-tag">Cloudflare</span>
+                        <span class="tool-tag">n8n</span>
+                        <span class="tool-tag">Nuclei</span>
+                        <span class="tool-tag">Burp Suite</span>
+                        <span class="tool-tag">Caido</span>
+                        <span class="tool-tag">Nim</span>
+                        <span class="tool-tag">Python</span>
+                        <span class="tool-tag">Bash</span>
+                        <span class="tool-tag">Docker</span>
+                        <span class="tool-tag">Git</span>
+                        <span class="tool-tag">LDAP / ldap2pg</span>
+                        <span class="tool-tag">Flipper Zero</span>
                     </div>
                 </div>
 
-                <!-- Autres compétences -->
-                <div class="skills-section">
-                    <h2 class="skills-title">
-                        <i class="fas fa-star"></i>
-                        Autres Compétences
-                    </h2>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <div class="skill-header">
-                                <i class="fas fa-plane"></i>
-                                <h3>Pilotage de Drone</h3>
-                            </div>
-                            <ul class="skill-list">
-                                <li>Diplôme CATT Officiel</li>
-                                <li>Pilotage professionnel</li>
-                            </ul>
-                        </div>
-
-                        <div class="skill-card">
-                            <div class="skill-header">
-                                <i class="fas fa-spa"></i>
-                                <h3>Élevage de Chèvres</h3>
-                            </div>
-                            <ul class="skill-list">
-                                <li>Passion pour la nature</li>
-                                <li>Agriculture responsable</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
         <footer class="footer">
             <div class="container">
-                <p>
-                    &copy; 2025 Clémence Chopin - DBA & Cybersecurity Enthusiast
-                </p>
-                <p class="footer-note">
-                    Built with <i class="fas fa-heart"></i> and code
-                </p>
+                <p>&copy; 2025 Clémence Chopin</p>
             </div>
         </footer>
 
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        />
-        <script src="js/matrix.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
